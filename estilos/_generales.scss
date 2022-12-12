@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    background-color: $color;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    text-align: center; /*SOLO PARA TEXTO */
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*ver todo el alto de la pantalla*/
+}
+
+h1{
+    padding-top: 10px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $color;
+}
+
+h2{
+    padding-top: 25px;
+}
+
+p{
+    padding: 15px;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    background-color: rgb(50, 57, 69);
+    color: rgb(230, 197, 138);
+    padding: 50px;
+}
+
+/*operaciones basicas*/
+ 
+/* EXTEND */
+
+/* CSS NOSOTROS */
+
+.nosotros2{
+    padding: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-cont{
+    @extend .nosotros2;
+    justify-items: center;
+}
+
+/* MIXIN */
+
+@mixin size ($width, $height){
+    height: $height;
+    width: $width;
+}

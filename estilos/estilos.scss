@@ -1,169 +1,12 @@
-/* CSS GENERAL*/
-
-/* mobile fisrt 0px-500px*/
-/*
-*{
-    padding: 0;
-    margin: 0;
-}
-html{
-    font-size: 62.5%;
-    background-color: #FFF6E5;
-    font-family: 'Montserrat', sans-serif;
-}
-
-footer{
-    background-color: rgb(50, 57, 69);
-    color: rgb(230, 197, 138);
-    padding: 50px;
-}
-
-h1{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #FFF6E5;
-    margin: 0;
-}
-
-h2{
-    padding-top: 25px;
-}
-
-p{
-    display: inline-block;
-    padding: 10px;
-    font-size: 150%;
-    text-align: justify;
-}
-
-a{
-    text-decoration: none;
-}
-
- CSS POR CLASES
-
-.color{
-    padding: 25px;
-    background-color: rgb(50, 57, 69);
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(230, 197, 138);
-    font-size: 15px;
-}
-
-.color-nav{
-    color: rgb(230, 197, 138);
-}
-
-.color-nav:hover{
-    color: #FFF6E5;
-}
-
-.ani-nav:hover{
-    text-decoration: underline;
-    color: #FFF6E5;
-}
-
-.redes{
-    display: inline-block;
-    padding-left: 5px;
-}
-
-.foto-header{
-    height: 100%;
-    width: 100%;
-    padding: 0;
-}
-
-.all{
-    padding: 60px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #FFF6E5;
-}
-
-.damia1{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.img-cont{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 23%;
-    height: 50%;
-    display: inline;
-}
-
-.nosotros2{
-    width: 69%;
-    height: 34%;
-}
-
-.link-texto:hover{
-    color: blue;
-    text-decoration: underline;
-}
-
-.formulario{
-    margin: 15px 60px 15px 60px;
-    border: 0.5px solid rgb(50, 57, 69);
-    border-radius: 2px;
-    padding: 10px;
-}
-
-.forms{
-    padding: 5px;
-}
-
- */
-
  /* CSS GENERAL*/
 
  /* mobile fisrt 0px-500px*/
 
-*{
-    padding: 0;
-    margin: 0;
-}
+ @import "variablesGlobales";
 
-html{
-    font-size: 62.5%;
-    background-color: #FFF6E5;
-    font-family: 'Montserrat', sans-serif;
-}
+@import "fuentes";
 
-body{
-    text-align: center; /*SOLO PARA TEXTO */
-    font-weight: bolder;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /*ver todo el alto de la pantalla*/
-}
-
-h1{
-    padding-top: 10px;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #FFF6E5;
-}
-
-h2{
-    padding-top: 25px;
-}
-
-p{
-    padding: 15px;
-    text-align: justify;
-}
-
-a{
-    text-decoration: none;
-}
-
-footer{
-    background-color: rgb(50, 57, 69);
-    color: rgb(230, 197, 138);
-    padding: 50px;
-}
+@import "generales";
 
 .color{
     padding: 25px;
@@ -178,19 +21,18 @@ footer{
 }
 
 .foto-header{
-    height: 100%;
-    width: 100%;
+    @include size (100%, 100%);
     padding: 0;
 }
 
 .all{
     font-family: 'Montserrat', sans-serif;
-    background-color: #FFF6E5;
+    background-color: $color;
 }
 
 .ani-nav:hover{
     text-decoration: underline;
-    color: #FFF6E5;
+    color: $color;
 }
 
 .color-nav{
@@ -198,7 +40,7 @@ footer{
 }
 
 .color-nav:hover{
-    color: #FFF6E5;
+    color: $color;
 }
 
 .redes{
@@ -210,21 +52,6 @@ footer{
 
 .mobile-home{
     padding: 110px 5px 110px 5px;
-}
-
-/* CSS NOSOTROS */
-
-.img-cont{ 
-    justify-items: center;
-    padding: 5px;
-    max-width: 100%;
-    height: auto%;
-}
-
-.nosotros2{
-    padding: 5px;
-    max-width: 100%;
-    height: auto;
 }
 
 /* CSS VINOS */
@@ -481,7 +308,7 @@ footer{
 
     /*GRID AREA INICIO*/
     .inicio-grid{
-        background-color: #FFF6E5;
+        background-color: $color;
         display: grid;
         grid-template-areas: 
         "nav nav"
@@ -533,7 +360,7 @@ footer{
 
     /*GRID AREA INICIO*/
     .inicio-grid{
-        background-color: #FFF6E5;
+        background-color: $color;
         display: grid;
         grid-template-areas: 
         "nav nav nav"
@@ -575,6 +402,10 @@ footer{
         grid-template-columns: 4fr;
     }
 
+    .text-vinos{
+        font-size: 11pt;
+    }
+
     .riesling-contenido{
         display:grid;
         grid-template-areas:
@@ -595,8 +426,7 @@ footer{
     }
 
     .riesling-img{
-        width: 410px;
-        height: 410px;
+        @include size (410px, 410px);
     }
 
     .riesling-p1{
@@ -625,8 +455,7 @@ footer{
     }
 
     .malbec-img{
-        width: 410px;
-        height: 410px;
+        @include size (410px, 410px);
     }
 
     .malbec-p1{
@@ -655,8 +484,7 @@ footer{
     }
 
     .tannat-img{
-        width: 410px;
-        height: 410px;
+        @include size (410px, 410px);
     }
 
     .tannat-p1{
